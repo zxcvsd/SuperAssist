@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zxcvsd</groupId>
+    <artifactId>super-assist</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- 统一子模块管理 -->
+    <modules>
+        <module>super-assist-common</module>
+        <module>super-assist-resource</module>
+        <module>super-assist-base</module>
+        <module>super-assist-gateway</module>
+        <module>super-assist-auth</module>
+    </modules>
+
+    <!-- 统一版本管理 -->
+    <properties>
+        <!-- 指定项目版本 -->
+        <revision>0.0.1</revision>
+        <!-- 指定 JDK 版本 -->
+        <java.version>11</java.version>
+        <!-- 指定 SpringBoot 版本 -->
+        <spring-boot.version>2.7.0</spring-boot.version>
+        <!-- 指定 maven编译时的字符编码 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- 指定 maven生成报告时的字符编码 -->
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- 指定 SpringCloud 版本 -->
+        <spring-cloud.version>2021.0.1</spring-cloud.version>
+        <!-- 指定 SpringCloudAlibaba 版本 -->
+        <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
+        <!-- 指定 Swagger 版本 -->
+        <springfox-boot-starter.version>3.0.0</springfox-boot-starter.version>
+        <!-- 指定 knife4j 版本 -->
+        <knife4j-spring-boot-starter.version>2.0.4</knife4j-spring-boot-starter.version>
+        <!-- 指定 hutool 版本 -->
+        <hutool-all.version>5.8.38</hutool-all.version>
+        <!-- 指定 lombok 版本 -->
+        <lombok.version>1.18.24</lombok.version>
+        <!-- 指定 MyBatis-Plus 版本 -->
+        <mybatis-plus-boot-starter.version>3.5.2</mybatis-plus-boot-starter.version>
+        <!-- 指定 MySQL - Java Connector 版本 -->
+        <mysql-connector-java.version>8.0.21</mysql-connector-java.version>
+        <!-- 指定 Druid 数据库连接池 版本 -->
+        <druid.version>1.2.8</druid.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 声明依赖 springBoot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- 声明依赖 springCloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- 声明依赖 springCloudAlibaba -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
