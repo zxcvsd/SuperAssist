@@ -5,15 +5,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
- * 状态枚举类
+ * 是否启用枚举类
  */
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public enum StateEnum {
+public enum IsEnableEnum {
 
-    STATE_OFF(0, "未启用"),
-    STATE_ON(1, "启用"),
+    Enable_Off(0, "未启用"),
+    Enable_On(1, "启用"),
     ;
 
     private int code;

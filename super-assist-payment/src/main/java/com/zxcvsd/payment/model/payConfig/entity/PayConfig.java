@@ -17,9 +17,11 @@ public class PayConfig {
     @TableId(type = IdType.AUTO)
     private Integer id;
     private Integer groupId;
+    private String title;
+    private String description;
     private Integer payWay;
     private String setting;
-    private Integer state;
+    private Integer isEnable;
     private Long createTime;
     private Long updateTime;
 }

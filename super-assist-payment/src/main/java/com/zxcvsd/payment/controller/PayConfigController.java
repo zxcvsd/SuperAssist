@@ -1,19 +1,29 @@
 package com.zxcvsd.payment.controller;
 
+import com.zxcvsd.base.result.PageResult;
 import com.zxcvsd.base.result.ResponseResult;
 import com.zxcvsd.payment.model.payConfig.dto.PayConfigDto;
 import com.zxcvsd.payment.model.payConfig.vo.DeleteListPayConfigVo;
 import com.zxcvsd.payment.model.payConfig.vo.DeletePayConfigVo;
 import com.zxcvsd.payment.model.payConfig.vo.InsertPayConfigVo;
 import com.zxcvsd.payment.model.payConfig.vo.UpdatePayConfigVo;
+import com.zxcvsd.payment.service.PayConfigService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Api(tags = "支付配置管理")
 @RestController
 @RequestMapping("/payConfig")
 public class PayConfigController {
+
+    @Autowired
+    @Qualifier("PayConfigServiceImpl")
+    private PayConfigService payConfigService;
 
     @ApiOperation("新增")
     @PostMapping("/insert")
@@ -47,13 +57,13 @@ public class PayConfigController {
 
     @ApiOperation("查询多个")
     @GetMapping("/selectList")
-    public ResponseResult<?> selectList() {
+    public ResponseResult<List<PayConfigDto>> selectList() {
         return null;
     }
 
     @ApiOperation("查询分页")
     @GetMapping("/selectPage")
-    public ResponseResult<?> selectPage(@RequestParam("currentPage") Integer currentPage, @RequestParam("pageSize") Integer pageSize) {
+    public ResponseResult<PageResult<PayConfigDto>> selectPage(@RequestParam("currentPage") Integer currentPage, @RequestParam("pageSize") Integer pageSize) {
         return null;
     }
 

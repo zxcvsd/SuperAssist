@@ -1,0 +1,25 @@
+server:
+  port: 12002
+  servlet:
+    context-path: /payment
+spring:
+  application:
+    name: payment-service
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher # 解决springboot升到2.6.x之后，swagger报错
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/super-assist-payment?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&nullCatalogMeansCurrent=true
+    username: root
+    password: root
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 是否打印sql查询日志
+    call-setters-on-nulls: true # 当用map接受查询结果时，若该值为false，当结果为null则不会以key-null的形式添加到map中
+    map-underscore-to-camel-case: true # 是否开启驼峰命名自动转换
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.zxcvsd.payment.model.entity
+  global-config:
+    db-config:
+      db-type: mysql # 指定数据库方言，根据实际情况修改

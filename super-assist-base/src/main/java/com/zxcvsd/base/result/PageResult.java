@@ -12,13 +12,13 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class PageResponseResult<T> {
+public class PageResult<T> {
     private Long total;
     private Long currentPage;
     private Long pageSize;
     private List<T> list;
 
-    public PageResponseResult(IPage<T> page) {
+    public PageResult(IPage<T> page) {
         this.total = page.getTotal();
         this.currentPage = page.getCurrent();
         this.pageSize = page.getSize();
