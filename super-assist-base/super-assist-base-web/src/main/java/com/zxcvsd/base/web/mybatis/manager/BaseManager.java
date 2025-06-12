@@ -1,6 +1,6 @@
 package com.zxcvsd.base.web.mybatis.manager;
 
-import com.zxcvsd.base.mybatis.mapper.SpiceBaseMapper;
+import com.zxcvsd.base.web.mybatis.mapper.SpiceBaseMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
