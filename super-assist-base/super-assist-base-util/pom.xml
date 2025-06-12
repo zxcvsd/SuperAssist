@@ -4,21 +4,21 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.zxcvsd</groupId>
-        <artifactId>super-assist</artifactId>
+        <groupId>com.zxcvsd.base</groupId>
+        <artifactId>super-assist-base</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.zxcvsd.resource</groupId>
-    <artifactId>super-assist-resource</artifactId>
+    <groupId>com.zxcvsd.util</groupId>
+    <artifactId>super-assist-base-util</artifactId>
 
     <dependencies>
+        <!--hutool-all-->
         <dependency>
-            <groupId>com.zxcvsd.base.web</groupId>
-            <artifactId>super-assist-base-web</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool-all.version}</version>
         </dependency>
-
     </dependencies>
 
 </project>

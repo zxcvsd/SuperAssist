@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.zxcvsd</groupId>
-        <artifactId>super-assist</artifactId>
+        <groupId>com.zxcvsd.base</groupId>
+        <artifactId>super-assist-base</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.zxcvsd.auth</groupId>
-    <artifactId>super-assist-auth</artifactId>
+    <groupId>com.zxcvsd.base.consumer</groupId>
+    <artifactId>super-assist-base-consumer</artifactId>
 
 </project>

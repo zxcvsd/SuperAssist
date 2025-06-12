@@ -11,12 +11,10 @@
 
     <!-- 统一子模块管理 -->
     <modules>
-        <module>super-assist-common</module>
-        <module>super-assist-resource</module>
         <module>super-assist-base</module>
         <module>super-assist-gateway</module>
         <module>super-assist-auth</module>
-        <module>super-assist-payment</module>
+        <module>super-assist-resource</module>
     </modules>
 
     <!-- 统一版本管理 -->
