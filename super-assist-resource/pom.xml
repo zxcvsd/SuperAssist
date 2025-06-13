@@ -18,7 +18,6 @@
             <artifactId>super-assist-base-web</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
     </dependencies>
 
 </project>

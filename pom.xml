@@ -43,10 +43,12 @@
         <lombok.version>1.18.24</lombok.version>
         <!-- 指定 MyBatis-Plus 版本 -->
         <mybatis-plus-boot-starter.version>3.5.2</mybatis-plus-boot-starter.version>
-        <!-- 指定 MySQL - Java Connector 版本 -->
+        <!-- 指定 MySQL-Java Connector 版本 -->
         <mysql-connector-java.version>8.0.21</mysql-connector-java.version>
         <!-- 指定 Druid 数据库连接池 版本 -->
         <druid.version>1.2.8</druid.version>
+        <!-- 指定 fastjson 版本 -->
+        <fastjson.version>2.0.48</fastjson.version>
     </properties>
 
     <dependencyManagement>
